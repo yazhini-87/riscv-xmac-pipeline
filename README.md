@@ -1,6 +1,6 @@
 # RISC-V RV32I + XMAC Custom ISA Extension
 
-**Final Year Project — Electronics (VLSI) | 2025-26**
+**Final Year Project — Electronics (VLSI) | 2026-27**
 
 ## Project Overview
 5-stage pipelined RV32I processor extended with a custom 
