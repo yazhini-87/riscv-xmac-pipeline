@@ -43,6 +43,4 @@ fused multiply-accumulate instruction (XMAC).
 - IEEE Embedded Systems Letters (ESL)
 - IEEE VLSID 2027
 
-## Team
-- Person A — RTL and Verification
-- Person B — Implementation and Benchmarks
+
