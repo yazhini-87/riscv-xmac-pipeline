@@ -10,6 +10,44 @@ fused multiply-accumulate instruction (XMAC).
 **Operation:** `rd = (rs1 × rs2) + rs3`  
 **Opcode:** custom-0 (0x0B) — RISC-V reserved extension space
 
+## Pipeline Architecture
+[insert pipeline diagram image]
+
+## XMAC Instruction Encoding
+| Bits    | Field  | Value    |
+|---------|--------|----------|
+| [6:0]   | opcode | 0001011  |
+| [11:7]  | rd     | dest reg |
+| [14:12] | funct3 | 000      |
+| [19:15] | rs1    | src1     |
+| [24:20] | rs2    | src2     |
+| [26:25] | funct2 | 00       |
+| [31:27] | rs3    | src3     |
+
+## Performance Results
+| Metric        | Value  |
+|---------------|--------|
+| Max Frequency | XX MHz |
+| LUT Count     | XXXX   |
+| FF Count      | XXXX   |
+| Power         | XX mW  |
+
+## How to Run Simulation
+```bash
+# In Vivado TCL console:
+open_project fpga/project_2.xpr
+launch_simulation
+run all
+```
+
+## How to Synthesize
+```bash
+open_project fpga/project_2.xpr
+launch_runs synth_1
+wait_on_run synth_1
+report_utilization
+```
+
 ## Features
 - Complete RV32I 5-stage pipeline (IF→ID→EX→MEM→WB)
 - Data forwarding (EX/MEM and MEM/WB paths including rs3)
